@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Icon from "@/components/ui/icon";
+import BeforeAfterSlider from "@/components/ui/before-after-slider";
 
 const Index = () => {
   const services = [
@@ -167,23 +168,14 @@ const Index = () => {
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden border-0 shadow-xl">
-              <CardContent className="p-0">
-                <div className="relative">
-                  <img 
-                    src="/img/a02ccfc5-d1b6-4ce2-926f-3786b9aa965f.jpg" 
-                    alt="Пример реставрации фото" 
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-white/90 text-gray-900 shadow-sm">
-                      До и После
-                    </Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <div className="text-center mt-8">
+            <BeforeAfterSlider
+              beforeImage="/img/b3f03ad1-ac46-4b7f-8c17-bfa00f7484f4.jpg"
+              afterImage="/img/7f1804b5-f358-4bf4-827b-afab3426f4e4.jpg"
+              beforeLabel="До реставрации"
+              afterLabel="После реставрации"
+              className="mb-8"
+            />
+            <div className="text-center">
               <Button variant="outline" className="border-eco-green text-eco-green hover:bg-eco-green hover:text-white">
                 <Icon name="Images" className="mr-2" size={20} />
                 Посмотреть больше примеров
