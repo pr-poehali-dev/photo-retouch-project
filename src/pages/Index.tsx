@@ -92,9 +92,30 @@ const Index = () => {
               <a href="#pricing" className="text-gray-600 hover:text-eco-green transition-colors">Цены</a>
               <a href="#contact" className="text-gray-600 hover:text-eco-green transition-colors">Контакты</a>
             </div>
-            <Button className="bg-eco-green hover:bg-eco-dark text-white">
-              Заказать реставрацию
-            </Button>
+            <div className="flex items-center space-x-4">
+              <div className="hidden lg:flex items-center space-x-3">
+                <a 
+                  href="tel:+79123456789" 
+                  className="flex items-center space-x-2 text-gray-700 hover:text-eco-green transition-colors"
+                >
+                  <Icon name="Phone" size={16} />
+                  <span className="font-medium">+7 912 345-67-89</span>
+                </a>
+                <div className="w-px h-6 bg-gray-300"></div>
+                <a 
+                  href="https://wa.me/79123456789" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-10 h-10 bg-green-500 hover:bg-green-600 text-white rounded-full transition-colors"
+                  title="Написать в WhatsApp"
+                >
+                  <Icon name="MessageCircle" size={18} />
+                </a>
+              </div>
+              <Button className="bg-eco-green hover:bg-eco-dark text-white">
+                Заказать реставрацию
+              </Button>
+            </div>
           </nav>
         </div>
       </header>
