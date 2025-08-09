@@ -82,7 +82,6 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Icon name="Camera" className="text-eco-green" size={32} />
               <span className="text-xl font-bold text-gray-900">Ретушь.ру</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
