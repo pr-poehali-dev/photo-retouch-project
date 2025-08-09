@@ -83,7 +83,7 @@ const Index = () => {
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Icon name="Camera" className="text-eco-green" size={32} />
-              <span className="text-xl font-bold text-gray-900">ФотоРеставрация</span>
+              <span className="text-xl font-bold text-gray-900">Ретушь.ру</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-gray-600 hover:text-eco-green transition-colors">Услуги</a>
