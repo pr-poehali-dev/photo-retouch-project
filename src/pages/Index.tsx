@@ -446,6 +446,126 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contacts" className="py-24 bg-gradient-to-br from-gray-50 via-white to-eco-green/5 relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute top-0 right-0 w-72 h-72 bg-eco-green/10 rounded-full blur-3xl translate-x-36 -translate-y-36"></div>
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-eco-green/5 rounded-full blur-3xl -translate-x-36 translate-y-36"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-20">
+            <Badge className="bg-white/80 text-eco-green border-eco-green/20 mb-6 backdrop-blur-sm">
+              📞 Связаться с нами
+            </Badge>
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Готовы <span className="text-eco-green">восстановить</span><br />
+              ваши фотографии?
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Выберите удобный способ связи. Отвечаем быстро и всегда готовы помочь!
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {/* Phone */}
+            <Card className="group text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 bg-white/90 backdrop-blur-sm cursor-pointer">
+              <CardContent className="p-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Icon name="Phone" className="text-blue-500" size={36} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Телефон</h3>
+                <p className="text-gray-600 mb-4">Звоните прямо сейчас</p>
+                <a 
+                  href="tel:+79123456789" 
+                  className="text-blue-500 font-semibold hover:text-blue-600 transition-colors text-lg"
+                >
+                  +7 912 345-67-89
+                </a>
+              </CardContent>
+            </Card>
+
+            {/* WhatsApp */}
+            <Card className="group text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 bg-white/90 backdrop-blur-sm cursor-pointer">
+              <CardContent className="p-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-500/20 to-green-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Icon name="MessageCircle" className="text-green-500" size={36} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">WhatsApp</h3>
+                <p className="text-gray-600 mb-4">Быстрые ответы 24/7</p>
+                <a 
+                  href="https://wa.me/79123456789" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 font-semibold hover:text-green-600 transition-colors"
+                >
+                  Написать в WhatsApp
+                </a>
+              </CardContent>
+            </Card>
+
+            {/* Email */}
+            <Card className="group text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 bg-white/90 backdrop-blur-sm cursor-pointer">
+              <CardContent className="p-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-purple-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Icon name="Mail" className="text-purple-500" size={36} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Почта</h3>
+                <p className="text-gray-600 mb-4">Для подробных запросов</p>
+                <a 
+                  href="mailto:info@photorestoration.ru" 
+                  className="text-purple-500 font-semibold hover:text-purple-600 transition-colors break-all"
+                >
+                  info@photorestoration.ru
+                </a>
+              </CardContent>
+            </Card>
+
+            {/* Telegram */}
+            <Card className="group text-center border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 bg-white/90 backdrop-blur-sm cursor-pointer">
+              <CardContent className="p-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Icon name="Send" className="text-cyan-500" size={36} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Telegram</h3>
+                <p className="text-gray-600 mb-4">Удобное общение</p>
+                <a 
+                  href="https://t.me/photorestoration" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-500 font-semibold hover:text-cyan-600 transition-colors"
+                >
+                  @photorestoration
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <Card className="max-w-4xl mx-auto bg-gradient-to-br from-eco-green to-eco-green/80 text-white border-0 shadow-2xl">
+              <CardContent className="p-12">
+                <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                  Не знаете, какой способ выбрать?
+                </h3>
+                <p className="text-xl mb-8 text-white/90">
+                  Отправьте фото в WhatsApp — получите консультацию за 5 минут!
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="bg-white text-eco-green hover:bg-white/90 px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    <Icon name="MessageCircle" className="mr-2" size={24} />
+                    Отправить фото в WhatsApp
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
+                    <Icon name="Phone" className="mr-2" size={20} />
+                    Позвонить сейчас
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
