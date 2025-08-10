@@ -93,22 +93,13 @@ const Index = () => {
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden lg:flex items-center space-x-3">
-                <div className="flex flex-col text-sm leading-tight">
-                  <a 
-                    href="tel:+79123456789" 
-                    className="flex items-center space-x-1 text-gray-700 hover:text-eco-green transition-colors mb-0.5"
-                  >
-                    <Icon name="Phone" size={12} />
-                    <span className="font-medium">+7 912 345-67-89</span>
-                  </a>
-                  <a 
-                    href="mailto:info@retush.ru" 
-                    className="flex items-center space-x-1 text-gray-600 hover:text-eco-green transition-colors"
-                  >
-                    <Icon name="Mail" size={12} />
-                    <span>info@retush.ru</span>
-                  </a>
-                </div>
+                <a 
+                  href="tel:+79123456789" 
+                  className="flex items-center space-x-2 text-gray-700 hover:text-eco-green transition-colors"
+                >
+                  <Icon name="Phone" size={16} />
+                  <span className="font-medium">+7 912 345-67-89</span>
+                </a>
                 <div className="w-px h-6 bg-gray-300"></div>
                 <a 
                   href="https://wa.me/79123456789" 
