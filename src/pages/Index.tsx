@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Icon from "@/components/ui/icon";
 import BeforeAfterSlider from "@/components/ui/before-after-slider";
+import PricingCarousel from "@/components/PricingCarousel";
 
 const Index = () => {
   const services = [
@@ -215,6 +216,183 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 bg-gradient-to-br from-white via-eco-green/5 to-white relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-eco-green/5 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-eco-green/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-20">
+            <Badge className="bg-white/80 text-eco-green border-eco-green/20 mb-6 backdrop-blur-sm">
+              💰 Прозрачные цены
+            </Badge>
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              <span className="text-eco-green">Цены</span> на услуги
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Честные цены за профессиональную работу с вашими фотографиями
+            </p>
+          </div>
+          
+          <div className="max-w-6xl mx-auto space-y-8">
+            {/* Basic Package */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Left side - Price & Description */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <Badge className="bg-eco-green/10 text-eco-green border-eco-green/20 mb-4">
+                      Базовая ретушь
+                    </Badge>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                      от <span className="text-eco-green">500₽</span>
+                    </h3>
+                    <p className="text-gray-600 text-lg mb-6">
+                      Идеально для простых задач: удаление пятен, царапин, коррекция цвета
+                    </p>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Удаление пыли и царапин
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Коррекция цвета и яркости
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Срок выполнения: 1-2 дня
+                    </li>
+                  </ul>
+                  <Button className="bg-eco-green hover:bg-eco-green/90 text-white">
+                    Заказать от 500₽
+                  </Button>
+                </div>
+                
+                {/* Right side - Image Carousel */}
+                <div className="bg-gray-50 p-6 lg:p-8 flex items-center">
+                  <PricingCarousel
+                    images={[
+                      { src: "/img/b3f03ad1-ac46-4b7f-8c17-bfa00f7484f4.jpg", alt: "Пример базовой ретуши 1" },
+                      { src: "/img/aa1d8ad1-40ea-47a4-ae8a-15ef3cf1c21b.jpg", alt: "Пример базовой ретуши 2" },
+                      { src: "/img/7f1804b5-f358-4bf4-827b-afab3426f4e4.jpg", alt: "Пример базовой ретуши 3" }
+                    ]}
+                    className="w-full"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Professional Package */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border-2 border-eco-green/20">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <Badge className="bg-eco-green text-white mb-4">
+                      Профессиональная ретушь
+                    </Badge>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                      от <span className="text-eco-green">1500₽</span>
+                    </h3>
+                    <p className="text-gray-600 text-lg mb-6">
+                      Сложные повреждения, восстановление деталей, глубокая ретушь
+                    </p>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Восстановление сильных повреждений
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Реконструкция утраченных деталей
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Профессиональная цветокоррекция
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Срок выполнения: 3-5 дней
+                    </li>
+                  </ul>
+                  <Button className="bg-eco-green hover:bg-eco-green/90 text-white">
+                    Заказать от 1500₽
+                  </Button>
+                </div>
+                
+                <div className="bg-gray-50 p-6 lg:p-8 flex items-center">
+                  <PricingCarousel
+                    images={[
+                      { src: "/img/7f1804b5-f358-4bf4-827b-afab3426f4e4.jpg", alt: "Пример профессиональной ретуши 1" },
+                      { src: "/img/06597b45-b8b9-4eb6-929a-67b4016d0af8.jpg", alt: "Пример профессиональной ретуши 2" },
+                      { src: "/img/b3f03ad1-ac46-4b7f-8c17-bfa00f7484f4.jpg", alt: "Пример профессиональной ретуши 3" }
+                    ]}
+                    className="w-full"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Premium Package */}
+            <div className="bg-gradient-to-r from-eco-green/10 to-eco-green/5 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-eco-green/20">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <Badge className="bg-gradient-to-r from-eco-green to-eco-green/80 text-white mb-4">
+                      Премиум реставрация
+                    </Badge>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                      от <span className="text-eco-green">3000₽</span>
+                    </h3>
+                    <p className="text-gray-600 text-lg mb-6">
+                      Полная реставрация исторических фотографий, художественная обработка
+                    </p>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Полная реставрация старых фото
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Колоризация чёрно-белых снимков
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Художественная обработка
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Индивидуальный подход
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <Icon name="Check" className="text-eco-green mr-3" size={16} />
+                      Срок выполнения: 5-10 дней
+                    </li>
+                  </ul>
+                  <Button className="bg-eco-green hover:bg-eco-green/90 text-white">
+                    Заказать от 3000₽
+                  </Button>
+                </div>
+                
+                <div className="bg-white/50 p-6 lg:p-8 flex items-center">
+                  <PricingCarousel
+                    images={[
+                      { src: "/img/6c1a96f1-5a5e-443b-adb4-071511c20e49.jpg", alt: "Пример премиум реставрации 1" },
+                      { src: "/img/7f1804b5-f358-4bf4-827b-afab3426f4e4.jpg", alt: "Пример премиум реставрации 2" },
+                      { src: "/img/aa1d8ad1-40ea-47a4-ae8a-15ef3cf1c21b.jpg", alt: "Пример премиум реставрации 3" }
+                    ]}
+                    className="w-full"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
